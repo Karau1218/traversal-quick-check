@@ -17,8 +17,8 @@ public class QuickCheck {
   public static void printLongerThan7(TreeNode<String> node) {
    if (node == null) return ;
 
-   if (node.data.length() > 7) {
-    System.out.println(node.data);
+   if (node.value.length() > 7) {
+    System.out.println(node.value);
    }
    printLongerThan7(node.left);
    printLongerThan7(node.right);
@@ -40,8 +40,8 @@ public class QuickCheck {
     int rightSum = oddSum(node.right);
 
     int current = 0;
-    if (node.data % 2 != 0) {   
-        current = node.data;
+    if (node.value % 2 != 0) {   
+        current = node.value;
     }
 
     return current + leftSum + rightSum;
